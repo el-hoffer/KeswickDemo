@@ -2,7 +2,7 @@
 apiVersion: esx.vmware.com/v1alpha1
 kind: HostConfiguration
 metadata:
-  name: ntp-sync
+  name: keswick-ntp-config
   namespace: esx-system
 spec:
   layertype: Incremental
