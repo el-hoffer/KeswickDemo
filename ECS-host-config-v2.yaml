@@ -63,7 +63,7 @@ spec:
           "user_accounts": [
             {
               "name": "monitor",
-              "password_hash": "$6$vocvaTDqp5Cg.$Q6q7pshtoHi59oeU9O9zJN4FQ4gjtobSvA1RKG1FbSeIhNIdYwrXCcYPMm8NUTb8GtkFSSjstdkQj2IYld2Qx/",
+              "password_hash": "980e22233e336c3500fc5401a09af66262ddcf4188fc4df27118f60442821113321ab2ecfdf653b1c82705793a0fa1a54a68500ef19a4da3b83bcea7a1717be6",
               "description": "Monitoring user account"
             }
           ]
