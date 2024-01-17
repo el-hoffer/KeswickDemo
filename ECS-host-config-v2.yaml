@@ -42,7 +42,7 @@ spec:
       "esx": {
           "system": {
             "welcome_message": {
-                "message": "{align:left}{color:white} \n\n\n\n\tVECO Managed - Lab Infra Edge Host{/color}{/align}\n\n\n\n\n\n\n\n\n{align:left}{color:yellow} \tTo manage this host, go to: \n\thttps://{ip}/ (DHCP)\n\thttps://[fe80::8aae:ddff:fe0c:b382]/ (STATIC){/color}{/align}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{align:left}{color:yellow} <F2> Customize System/View Logs{/color}{/align}{align:right}{color:yellow} <F12> Shut Down/Restart{/color}{/align}"
+                "message": "{align:left}{color:white} \n\n\n\n\tVECO Managed - Hoffer Lab Infra Edge Host{/color}{/align}\n\n\n\n\n\n\n\n\n{align:left}{color:yellow} \tTo manage this host, go to: \n\thttps://{ip}/ (DHCP)\n\thttps://[fe80::8aae:ddff:fe0c:b382]/ (STATIC){/color}{/align}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{align:left}{color:yellow} <F2> Customize System/View Logs{/color}{/align}{align:right}{color:yellow} <F12> Shut Down/Restart{/color}{/align}"
             }
           }
       }
@@ -62,8 +62,8 @@ spec:
         "authentication": {
           "user_accounts": [
             {
-              "name": "monitor",
-              "password_hash": "980e22233e336c3500fc5401a09af66262ddcf4188fc4df27118f60442821113321ab2ecfdf653b1c82705793a0fa1a54a68500ef19a4da3b83bcea7a1717be6",
+              "name": "testmon",
+              "password_hash": "$6$143fc27e22f2b0bfa97521b41b3fdd9ea33e1a9c0c2ac46b09bd4d361d70f4591c90f615f64cbbecb7064de5a3a80a5b5a68e2a11fcf4da689247abd0d3cafd4",
               "description": "Monitoring user account"
             }
           ]
