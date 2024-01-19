@@ -64,7 +64,7 @@ spec:
             {
               "name": "testmon",
               "description": "Monitoring user account",
-              "password_hash": "$6$143fc27e22f2b0bfa97521b41b3fdd9ea33e1a9c0c2ac46b09bd4d361d70f4591c90f615f64cbbecb7064de5a3a80a5b5a68e2a11fcf4da689247abd0d3cafd4"
+              "password_hash": "$6$0fuSsfbkjKeOqsw.$MSY9jjylwMBONfTejnt7tM3unRSECiomtaOnnmqQ0Dnxksc6SfaUswHp/8i6OhBkpha..z.iq/mhlgmVNjqak."
             }
           ]
         },
