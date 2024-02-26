@@ -79,32 +79,3 @@ spec:
         }
       }
     }
----
-#Example VSS with allow promiscuous, mac changes, and forged transmits
-apiVersion: esx.vmware.com/v1alpha1
-kind: HostConfiguration
-metadata:
-  name: vswitch-cfg
-  namespace: esx-system
-spec:
-  layertype: Incremental
-  profile: |
-    {
-      "esx": {
-        "network_vss": {
-          "switches": [
-            {
-              "name": "vSwitch0",
-              "policy": {
-                "security": {
-                  "allow_promiscuous": false,
-                  "mac_changes": false,
-                  "forged_transmits": false
-                }
-              }
-            }
-          ]
-        }
-      }
-    }
----
