@@ -84,7 +84,7 @@ spec:
 apiVersion: esx.vmware.com/v1alpha1
 kind: HostConfiguration
 metadata:
-  name: monitoring-user
+  name: vswitch-cfg
   namespace: esx-system
 spec:
   layertype: Incremental
