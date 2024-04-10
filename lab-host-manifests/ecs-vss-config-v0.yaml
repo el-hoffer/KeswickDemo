@@ -47,12 +47,16 @@ spec:
                                 "name": "TestPG",
                                 "vlan_id": 0,
                                 "policy": {
-                                  "Security": {
-                                    "allow_promiscuous": true,
-                                    "mac_changes": true,
-                                    "forged_transmits": true
-                                  }
+                                    "Security": {
+                                        "allow_promiscuous": true,
+                                        "mac_changes": true,
+                                        "forged_transmits": true
+                                    }
                                 }
+                            },
+                            {
+                                "name": "HomeAuto",
+                                "vlan_id": 0
                             }
                         ],
                         "policy": {
