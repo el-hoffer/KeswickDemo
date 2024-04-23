@@ -1,0 +1,63 @@
+#Example showing how to enable add a new PG w/promiscuous mode and forged transmits
+apiVersion: esx.vmware.com/v1alpha1
+kind: HostConfiguration
+metadata:
+  name: vss-cfg
+  namespace: esx-system
+spec:
+  layertype: Incremental
+  profile: |
+    {
+        "esx": {
+            "network_vss": {
+                "switches": [
+                    {
+                        "name": "vSwitch0",
+                        "bridge": {
+                            "link_discovery_protocol": {
+                                "protocol": "CDP",
+                                "operation": "LISTEN"
+                            },
+                            "nics": [
+                                "vmnic0"
+                            ]
+                        },
+                        "port_groups": [
+                            {
+                                "name": "TestPG",
+                                "vlan_id": 0,
+                                "policy": {
+                                    "Security": {
+                                        "allow_promiscuous": true,
+                                        "mac_changes": true,
+                                        "forged_transmits": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HomeAuto",
+                                "vlan_id": 0
+                            }
+                        ],
+                        "policy": {
+                            "nic_teaming": {
+                                "policy": "LOADBALANCE_SRCID",
+                                "notify_switches": true,
+                                "rolling_order": false,
+                                "link_criteria_beacon": "IGNORE",
+                                "active_nics": [
+                                    "vmnic0"
+                                ],
+                                "standby_nics": []
+                            },
+                            "security": {
+                                "allow_promiscuous": false,
+                                "mac_changes": false,
+                                "forged_transmits": false
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
