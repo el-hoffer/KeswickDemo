@@ -7,20 +7,20 @@ metadata:
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: guaranteed-small
+  className: best-effort-small
   imageName: ent.box.com/s/6joic221x87k2tu7eqk6c4h162rd43qi
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
-    ethernetCardType: "vmxnet3"
+    ethernetCardType: "e1000e"
   vmMetadata:
-    configMapName: user-data-photon
+    configMapName: user-data-haos
     transport: CloudInit
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: user-data-photon
+    name: user-data-haos
     namespace: default
 #data:
   user-data: |
@@ -30,9 +30,5 @@ metadata:
       - name: root
         sudo: ALL=(ALL) NOPASSWD:ALL
         lock_passwd: false
-        passwd: '$6$rounds=4096$g4hhnNzlgGol6ghX$E.Qu.vzMA.qzufAhwI84THkFSTjGCTognWAiSt8uioMKjKDUF1wPtIAiKaSyIaT/JuunlWk8pDetIgYLT81Nr0'
+        passwd: '$6$0fuSsfbkjKeOqsw.$MSY9jjylwMBONfTejnt7tM3unRSECiomtaOnnmqQ0Dnxksc6SfaUswHp/8i6OhBkpha..z.iq/mhlgmVNjqak.'
         shell: /bin/bash
-    write_files:
-      - content: |
-          Keswick VM service says Hello World
-        path: /helloworld
