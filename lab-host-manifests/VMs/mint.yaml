@@ -1,0 +1,34 @@
+#Mint linux example
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: home-assistant
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  className: best-effort-small
+  imageName: ent.box.com/shared/static/6joic221x87k2tu7eqk6c4h162rd43qi.bork
+  powerState: poweredOn
+  networkInterfaces:
+  - networkName: "VM Network"
+    ethernetCardType: "vmxnet3"
+  vmMetadata:
+    configMapName: user-data-haos
+    transport: CloudInit
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: user-data-haos
+    namespace: default
+#data:
+  user-data: |
+    #cloud-config
+    ssh_pwauth: true
+    users:
+      - name: root
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        lock_passwd: false
+        passwd: '$6$0fuSsfbkjKeOqsw.$MSY9jjylwMBONfTejnt7tM3unRSECiomtaOnnmqQ0Dnxksc6SfaUswHp/8i6OhBkpha..z.iq/mhlgmVNjqak.'
+        shell: /bin/bash
