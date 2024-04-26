@@ -1,4 +1,4 @@
-#example deployment and post customsiation for Photon VM
+#haos OVA deployment
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
