@@ -2,7 +2,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: home-assistant
+  name: mint-for-GRT
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
@@ -14,13 +14,13 @@ spec:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
   vmMetadata:
-    configMapName: user-data-haos
+    configMapName: user-data-mint
     transport: CloudInit
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: user-data-haos
+    name: user-data-mint
     namespace: default
 data:
   user-data: |
