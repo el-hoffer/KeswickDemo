@@ -8,7 +8,7 @@ metadata:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: best-effort-small
-  imageName: ent.box.com/s/6joic221x87k2tu7eqk6c4h162rd43qi
+  imageName: ent.box.com/shared/static/6joic221x87k2tu7eqk6c4h162rd43qi.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
