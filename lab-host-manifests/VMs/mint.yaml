@@ -22,7 +22,7 @@ kind: ConfigMap
 metadata:
     name: user-data-haos
     namespace: default
-#data:
+data:
   user-data: |
     #cloud-config
     ssh_pwauth: true
