@@ -13,6 +13,8 @@ spec:
       _typeName: ResourceAllocationInfo
       limit: 2048
       reservation: 0
+    latencySensitivity: 
+      level: high
   hardware:
     cpus: 2
     memory: 7Gi
