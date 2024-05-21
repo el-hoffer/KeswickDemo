@@ -1,0 +1,14 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: win-vbs-test
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  className: lukes-vm-class
+  imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
+  powerState: poweredOn
+  networkInterfaces:
+  - networkName: "VM Network"
+    ethernetCardType: "vmxnet3"
