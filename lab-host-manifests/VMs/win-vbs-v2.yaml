@@ -9,12 +9,13 @@ spec:
   className: best-effort-ec-small
   imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
   powerState: poweredOn
-    latencySensitivity:
-      _typeName: LatencySensitivity 
-      level: high
-    flags:
-      _typeName: VirtualMachineFlagInfo
-      vbsEnabled: true
+  version: 21
+  latencySensitivity:
+    _typeName: LatencySensitivity 
+    level: high
+  flags:
+    _typeName: VirtualMachineFlagInfo
+    vbsEnabled: true
   networkInterfaces:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
