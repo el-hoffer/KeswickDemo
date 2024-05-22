@@ -9,7 +9,6 @@ spec:
   className: best-effort-ec-small
   imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
   powerState: poweredOn
-    version: 21
     latencySensitivity:
       _typeName: LatencySensitivity 
       level: high
