@@ -6,16 +6,9 @@ metadata:
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: best-effort-ec-small
+  className: vbs-vm-class
   imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
   powerState: poweredOn
-  version: 21
-  latencySensitivity:
-    _typeName: LatencySensitivity 
-    level: high
-  flags:
-    _typeName: VirtualMachineFlagInfo
-    vbsEnabled: true
   networkInterfaces:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"

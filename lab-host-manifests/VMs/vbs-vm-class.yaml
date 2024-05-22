@@ -1,0 +1,18 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: vbs-vm-class
+  namespace: default
+spec:
+  configSpec:
+    _typeName: VirtualMachineConfigSpec
+    version: 21
+    latencySensitivity:
+      _typeName: LatencySensitivity 
+      level: high
+    flags:
+      _typeName: VirtualMachineFlagInfo
+      vbsEnabled: True
+  hardware:
+    cpus: 4
+    memory: 8Gi
