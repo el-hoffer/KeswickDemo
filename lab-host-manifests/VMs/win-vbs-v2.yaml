@@ -1,14 +1,21 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: win-vbs-test
+  name: win-vbs-testv2
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: lukes-vm-class
+  className: best-effort-ec-small
   imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
   powerState: poweredOn
+    version: 21
+    latencySensitivity:
+      _typeName: LatencySensitivity 
+      level: high
+    flags:
+      _typeName: VirtualMachineFlagInfo
+      vbsEnabled: true
   networkInterfaces:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
