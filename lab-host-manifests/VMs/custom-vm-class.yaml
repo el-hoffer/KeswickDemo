@@ -5,12 +5,19 @@ metadata:
 spec:
   configSpec:
     _typeName: VirtualMachineConfigSpec
+    nestedHVEnabled: true
+    firmware: efi
     latencySensitivity:
       _typeName: LatencySensitivity 
       level: high
     flags:
       _typeName: VirtualMachineFlagInfo
-      vbsEnabled: True
+      vbsEnabled: true
+      vvtdEnabled: true
+    bootOptions:
+      _typeName:  VirtualMachineBootOptions
+      efiSecureBootEnabled: true
+
   hardware:
     cpus: 4
     memory: 8Gi
