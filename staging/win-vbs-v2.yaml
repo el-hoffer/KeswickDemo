@@ -6,7 +6,7 @@ metadata:
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
-  className: vbs-vm-class
+  className: lukes-vm-class
   imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
   powerState: poweredOn
   networkInterfaces:

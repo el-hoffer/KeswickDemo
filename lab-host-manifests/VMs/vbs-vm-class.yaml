@@ -1,7 +1,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachineClass
 metadata:
-  name: vbs-vm-class
+  name: lukes-vm-class
   namespace: default
 spec:
   configSpec:
