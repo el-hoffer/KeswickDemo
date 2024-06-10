@@ -7,7 +7,7 @@ data:
         <title>ECS Deployed nginx Pod</title>
     </head>
     <body>
-        <p>ECS Deployed nginx Pod<p>
+        <p>ECS did a thing!<p>
     </body>
     </html>
 kind: ConfigMap
