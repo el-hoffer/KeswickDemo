@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>ECS Deployed nginx Pod</title>
+    </head>
+    <body>
+        <p>ECS Deployed nginx Pod<p>
+    </body>
+    </html>
+kind: ConfigMap
+metadata:
+  name: sample-page-1
+  namespace: nginx-demo
