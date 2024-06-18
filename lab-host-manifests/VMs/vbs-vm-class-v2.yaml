@@ -1,4 +1,4 @@
-apiVersion: vmoperator.vmware.com/v1alpha3
+apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachineClass
 metadata:
   name: lukes-vm-class
