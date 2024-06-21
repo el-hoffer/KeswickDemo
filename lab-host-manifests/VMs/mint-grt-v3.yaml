@@ -25,10 +25,8 @@ metadata:
 data:
   user-data: |
     #cloud-config
-    ssh_pwauth: true
-    users:
-      - name: root
-        sudo: ALL=(ALL) NOPASSWD:ALL
-        lock_passwd: false
-        passwd: '$6$0fuSsfbkjKeOqsw.$MSY9jjylwMBONfTejnt7tM3unRSECiomtaOnnmqQ0Dnxksc6SfaUswHp/8i6OhBkpha..z.iq/mhlgmVNjqak.'
-        shell: /bin/bash
+    package_update: true
+    packages:
+      - lib32stdc++6
+    runcmd:
+      - dpkg --add-architecture i386
