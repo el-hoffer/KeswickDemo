@@ -1,0 +1,41 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  #This is the name that our VM will be deployed with
+  name: photon-vm
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  #The VM class is a separate template specifying the # of CPUs, memory and other VM configuration settings
+  #ECS has pre-built classes like the "guaranteed-small" class used here, or you can create custom classes
+  className: guaranteed-small
+  #imageName is the URL from which the host will download the OVA for this VM
+  imageName: packages.vmware.com/photon/4.0/GA/ova/photon-hw11-4.0-1526e30ba0.ova
+  powerState: poweredOn
+  networkInterfaces:
+  #networkName is the name of the port group to connect the VM to
+  - networkName: "HOL VM Network"
+    ethernetCardType: "vmxnet3"
+  vmMetadata:
+    #This references the ConfigMap below, allowing us to pass additional paremeters to the VM
+    configMapName: user-data
+    #transport in this case specifies that our ConfigMap is a cloud-init script
+    transport: CloudInit
+---
+#This ConfigMap is a simple cloud-init script that'll set the root password for our VM
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: user-data
+    namespace: default
+data:
+  user-data: |
+    #cloud-config
+    ssh_pwauth: true
+    users:
+      - name: root
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        lock_passwd: false
+        passwd: '$6$b4cdf810654e90cc1d62b7acf92f31972698465be0f4c3e27cad01ada0f15bd084c992f3cbe9ab0f29d30fe92d15aac4e23cba3574c5c4f833dc0fab31a75f8f'
+        shell: /bin/bash
