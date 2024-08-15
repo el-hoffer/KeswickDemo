@@ -11,7 +11,7 @@ spec:
   #ECS has pre-built classes like the "guaranteed-small" class used here, or you can create custom classes
   className: best-effort-large
   #imageName is the URL from which the host will download the OVA for this VM
-  imageName: https://ent.box.com/shared/static/hq71auo0hqgomlh2tysahq67q9yjvgy3.ova
+  imageName: ent.box.com/shared/static/hq71auo0hqgomlh2tysahq67q9yjvgy3.ova
   powerState: poweredOn
   networkInterfaces:
   #networkName is the name of the port group to connect the VM to
