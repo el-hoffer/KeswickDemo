@@ -2,7 +2,7 @@ apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
   #This is the name that our VM will be deployed with
-  name: photon-vm
+  name: hol-demo-vm
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
