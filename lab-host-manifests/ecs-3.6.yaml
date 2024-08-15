@@ -1,0 +1,19 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  #This is the name that our VM will be deployed with
+  name: ecs-lab-vm
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  #The VM class is a separate template specifying the # of CPUs, memory and other VM configuration settings
+  #ECS has pre-built classes like the "guaranteed-small" class used here, or you can create custom classes
+  className: best-effort-large
+  #imageName is the URL from which the host will download the OVA for this VM
+  imageName: https://ent.box.com/shared/static/hq71auo0hqgomlh2tysahq67q9yjvgy3.ova
+  powerState: poweredOn
+  networkInterfaces:
+  #networkName is the name of the port group to connect the VM to
+  - networkName: "Lab PG"
+    ethernetCardType: "vmxnet3"
