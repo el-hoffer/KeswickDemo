@@ -7,7 +7,7 @@ metadata:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: lukes-vm-class
-  imageName: ent.box.com/shared/static/urys92gvs925u19homuqe86cyzbt89wf.ova
+  imageName: https://ent.box.com/s/0qfqejtzncqtmvu9441qryahkfutv6ob
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
