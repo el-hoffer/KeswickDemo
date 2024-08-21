@@ -15,9 +15,6 @@ spec:
     flags:
       _typeName: VirtualMachineFlagInfo
       vbsEnabled: True
-  configInfo:
-    cpuAffinity:
-      affinitySet: [0-4]
   hardware:
     cpus: 4
     memory: 8Gi
