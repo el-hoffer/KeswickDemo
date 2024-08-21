@@ -7,6 +7,9 @@ spec:
   configSpec:
     _typeName: VirtualMachineConfigSpec
     version: 21
+    datastoreUrl
+      name: datastore1
+      url: /vmfs/volumes/6671a2db-004448b5-265b-48210b361c4b
     cpuAffinity:
       affinitySet: [0-2]
     latencySensitivity:
