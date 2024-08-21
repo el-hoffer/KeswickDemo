@@ -3,9 +3,6 @@ kind: VirtualMachineClass
 metadata:
   name: lukes-vm-class
   namespace: default
-configInfo:
-  cpuAffinity:
-    affinitySet: [0-4]
 spec:
   configSpec:
     _typeName: VirtualMachineConfigSpec
@@ -18,6 +15,9 @@ spec:
     flags:
       _typeName: VirtualMachineFlagInfo
       vbsEnabled: True
+  configInfo:
+    cpuAffinity:
+      affinitySet: [0-4]
   hardware:
     cpus: 4
     memory: 8Gi
