@@ -7,6 +7,8 @@ spec:
   configSpec:
     _typeName: VirtualMachineConfigSpec
     version: 21
+    cpuAffinity:
+      affinitySet: [0-4]
     latencySensitivity:
       _typeName: LatencySensitivity 
       level: high
