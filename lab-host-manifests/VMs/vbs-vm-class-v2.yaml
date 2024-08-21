@@ -3,6 +3,9 @@ kind: VirtualMachineClass
 metadata:
   name: lukes-vm-class
   namespace: default
+configInfo:
+  cpuAffinity:
+    affinitySet: [0-4]
 spec:
   configSpec:
     _typeName: VirtualMachineConfigSpec
