@@ -16,7 +16,7 @@ spec:
   vmMetadata:
     configMapName: user-data-mint
     transport: CloudInit
-configInfo:
+config:
   cpuAffinity: [0-4]
 ---
 apiVersion: v1
