@@ -1,0 +1,17 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: lukes-vm-class-2
+  namespace: default
+spec:
+  configSpec:
+    _typeName: VirtualMachineConfigSpec
+    version: 21
+    cpuAffinity:
+      affinitySet: [0-2]
+    latencySensitivity:
+      _typeName: LatencySensitivity 
+      level: high
+  hardware:
+    cpus: 2
+    memory: 8Gi

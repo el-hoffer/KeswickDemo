@@ -1,0 +1,19 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  #This is the name that our VM will be deployed with
+  name: gitlab-ce
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  #The VM class is a separate template specifying the # of CPUs, memory and other VM configuration settings
+  #ECS has pre-built classes like the "guaranteed-small" class used here, or you can create custom classes
+  className: lukes-vm-class-2
+  #imageName is the URL from which the host will download the OVA for this VM
+  imageName: bitnami.com/redirect/to/2479074/bitnami-gitlab-17.3.0-ce.0-r0-debian-12-amd64.ova
+  powerState: poweredOn
+  networkInterfaces:
+  #networkName is the name of the port group to connect the VM to
+  - networkName: "VM Network"
+    ethernetCardType: "vmxnet3"
