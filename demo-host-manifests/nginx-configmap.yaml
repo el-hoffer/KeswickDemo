@@ -7,7 +7,7 @@ data:
         <title>ECS Deployed nginx Pod</title>
     </head>
     <body>
-        <p style="font-size: 40px;">HOL ECS deployed NGINX site<p>
+        <p style="font-size: 40px;">O'Reilly NGINX site<p>
     </body>
     </html>
 kind: ConfigMap
