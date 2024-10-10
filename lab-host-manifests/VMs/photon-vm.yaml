@@ -15,7 +15,7 @@ spec:
   powerState: poweredOn
   networkInterfaces:
   #networkName is the name of the port group to connect the VM to
-  - networkName: "HOL VM Network"
+  - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
   vmMetadata:
     #This references the ConfigMap below, allowing us to pass additional paremeters to the VM
