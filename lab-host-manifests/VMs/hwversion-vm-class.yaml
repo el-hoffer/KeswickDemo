@@ -1,0 +1,12 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineClass
+metadata:
+  name: hwversion-vm-class
+  namespace: default
+spec:
+  configSpec:
+    _typeName: VirtualMachineConfigSpec
+    version: 21
+  hardware:
+    cpus: 2
+    memory: 4Gi

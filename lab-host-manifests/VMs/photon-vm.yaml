@@ -9,7 +9,7 @@ metadata:
 spec:
   #The VM class is a separate template specifying the # of CPUs, memory and other VM configuration settings
   #ECS has pre-built classes like the "guaranteed-small" class used here, or you can create custom classes
-  className: guaranteed-small
+  className: hwversion-vm-class
   #imageName is the URL from which the host will download the OVA for this VM
   imageName: packages.vmware.com/photon/4.0/GA/ova/photon-hw11-4.0-1526e30ba0.ova
   powerState: poweredOn
