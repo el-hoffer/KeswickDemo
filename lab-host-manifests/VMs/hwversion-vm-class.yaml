@@ -5,8 +5,8 @@ metadata:
   namespace: default
 spec:
   configSpec:
-    _typeName: VirtualMachineConfigSpec
-    version: 21
+    _typeName: VirtualHardwareOption
+    hwVersion: 21
   hardware:
     cpus: 2
     memory: 4Gi
